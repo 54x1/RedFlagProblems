@@ -49,7 +49,7 @@ perk(perks);
 }
 function perk(data){
     console.log(data);
-  return data;
+$('.perk1').append(data);
 
 }
 
@@ -68,8 +68,8 @@ joinGameBtn.addEventListener('click', joinGame);
 console.log(perksData);
 function newGame() {
   socket.emit('newGame');
-  const perksData = perk();
-$('.perk1').append(perksData);
+
+perk();
   init();
 }
 
