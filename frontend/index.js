@@ -56,9 +56,9 @@ joinGameBtn.addEventListener('click', joinGame);
 
 
 
-function newGame(perks) {
+function newGame() {
   socket.emit('newGame');
-  alert(perk());
+  perk();
   init();
 }
 function joinPerks(perkData1, perkData2){
@@ -69,15 +69,17 @@ function joinPerks(perkData1, perkData2){
         var perkData1 = (data.perks[randIn].card);
         var perkData2 = (data.perks[randIn2].card);
         var perks = [perkData1, perkData2];
-perk(perks);
+        function perk(perks) {
+        return perks;
+        }
+
     });
 
 
 }
-function perk(perks) {
 
-return perks;
-}
+
+
 
 $(joinGameBtn).on('click', function(){
   $(gameCodeDisplay).html($(gameCodeInput).val());
