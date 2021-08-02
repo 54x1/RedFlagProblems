@@ -41,7 +41,7 @@ socket.on('gameOver', handleGameOver);
 socket.on('gameCode', handleGameCode);
 socket.on('unknownCode', handleUnknownCode);
 socket.on('tooManyPlayers', handleTooManyPlayers);
-socket.on('gameCode1', handleGameCode1);
+// socket.on('gameCode1', handleGameCode1);
 
 
 const gameScreen = document.getElementById('gameScreen');
@@ -52,14 +52,14 @@ const gameCodeInput = document.getElementById('gameCodeInput');
 const gameCodeDisplay = document.getElementById('gameCodeDisplay');
 
 newGameBtn.addEventListener('click', newGame);
-newGameBtn.addEventListener('click', joinGame1);
+// newGameBtn.addEventListener('click', joinGame1);
 joinGameBtn.addEventListener('click', joinGame);
 
 $(joinGameBtn).on('click', function(){
   // alert($(gameCodeInput).val());
   const varPerks = perk();
 $(gameCodeDisplay).html($(gameCodeInput).val())
-$('.perk1').append(varPerks[0]);
+// $('.perk1').append(varPerks[0]);
 
 });
 
@@ -70,19 +70,19 @@ function newGame() {
   init();
 }
 
-function joinGame1(perkData1, perkData2){
-  // socket.emit('newGame1');
-    $.getJSON("perks.json",function(data){
-        var randIn = Math.floor(Math.random() * (data.perks.length));
-        var randIn2 = Math.floor(Math.random() * (data.perks.length));
-        var perkData1 = (data.perks[randIn].card);
-        var perkData2 = (data.perks[randIn2].card);
-        var perks = [perkData1, perkData2];
-perk(perks);
-    });
-
-
-}
+// function joinGame1(perkData1, perkData2){
+//   // socket.emit('newGame1');
+//     $.getJSON("perks.json",function(data){
+//         var randIn = Math.floor(Math.random() * (data.perks.length));
+//         var randIn2 = Math.floor(Math.random() * (data.perks.length));
+//         var perkData1 = (data.perks[randIn].card);
+//         var perkData2 = (data.perks[randIn2].card);
+//         var perks = [perkData1, perkData2];
+// perk(perks);
+//     });
+//
+//
+// }
 function perk(perks) {
   console.log(perks);
 return perks;
@@ -189,13 +189,13 @@ function handleGameOver(data) {
 function handleGameCode(gameCode) {
   gameCodeDisplay.innerText = gameCode;
 }
-function handleGameCode1(gameCode1){
-$.getJSON("perks.json",function(data){
-    var randIn = Math.floor(Math.random() * (data.perks.length));
-    var randIn2 = Math.floor(Math.random() * (data.perks.length));
-    $('body').append('perkData');
-});
-}
+// function handleGameCode1(gameCode1){
+// $.getJSON("perks.json",function(data){
+//     var randIn = Math.floor(Math.random() * (data.perks.length));
+//     var randIn2 = Math.floor(Math.random() * (data.perks.length));
+//     $('body').append('perkData');
+// });
+// }
 function handleUnknownCode() {
   reset();
   alert('Unknown Game Code');
