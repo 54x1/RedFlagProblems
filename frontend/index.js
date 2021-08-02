@@ -34,8 +34,9 @@ socket.on('unknownCode', handleUnknownCode);
 socket.on('tooManyPlayers', handleTooManyPlayers);
 // socket.on('gameCode1', handleGameCode1);
 function perk(perks){
+    alert(perks);
   return perks;
-  console.log(perks);
+
 }
 
 function joinPerks(){
