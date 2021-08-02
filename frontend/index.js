@@ -76,15 +76,14 @@ perk(perks);
 
 }
 function perk(perks) {
-  // console.log(perks);
+
 return perks;
 }
+
 $(joinGameBtn).on('click', function(){
   $(gameCodeDisplay).html($(gameCodeInput).val());
-  joinPerks();
-  const varPerks = perk();
-  console.log(varPerks)
-$('.perk1').append(varPerks);
+  var perk1 = perk(perks);
+  $('.perk1').append(perk1);
 
 });
 
