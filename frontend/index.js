@@ -1,7 +1,23 @@
-const BG_COLOUR = '#231f20';
-const SNAKE_COLOUR = '#c2c2c2';
-const FOOD_COLOUR = '#e66916';
+$( ".card-section" ).click(function() {
+    if ( $( this ).hasClass("ui-draggable-dragging") ) {
 
+}
+});
+
+$('.card-section').draggable({
+  cursor: "grabbing",
+  containment: ".place",
+  stack: ".card-section",
+  snapTolerance: 20
+});
+
+
+$('.flags').sortable();
+
+
+$('.card-section').on('touchmove', function(){
+// $(this).css({"left"}) =
+});
 const socket = io('https://flags-54x1.herokuapp.com/');
 
 socket.on('init', handleInit);
@@ -10,6 +26,8 @@ socket.on('gameOver', handleGameOver);
 socket.on('gameCode', handleGameCode);
 socket.on('unknownCode', handleUnknownCode);
 socket.on('tooManyPlayers', handleTooManyPlayers);
+// socket.on('gameCode1', handleGameCode1);
+
 
 const gameScreen = document.getElementById('gameScreen');
 const initialScreen = document.getElementById('initialScreen');
@@ -19,14 +37,21 @@ const gameCodeInput = document.getElementById('gameCodeInput');
 const gameCodeDisplay = document.getElementById('gameCodeDisplay');
 
 newGameBtn.addEventListener('click', newGame);
+// newGameBtn.addEventListener('click', joinGame1);
 joinGameBtn.addEventListener('click', joinGame);
 
 $(joinGameBtn).on('click', function(){
   // alert($(gameCodeInput).val());
+  // const varPerks = perk();
 $(gameCodeDisplay).html($(gameCodeInput).val())
+// $('.perk1').append(varPerks[0]);
+
 });
+
 function newGame() {
+  // const varPerks = perk();
   socket.emit('newGame');
+  // alert('ng');
   init();
 }
 
