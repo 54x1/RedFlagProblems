@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Red Flags</title>
+    <!-- build:css --><link href="css-min/styles.min.css" rel="stylesheet"><!-- endbuild -->
+<!-- httpspensive-heyrovsky-a34277.netlify.app -->
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="img-min/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img-min/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img-min/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img-min/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="img-min/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="img-min/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="img-min/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="img-min/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="img-min/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="img-min/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="img-min/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="img-min/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="img-min/favicon-128.png" sizes="128x128" />
+    <meta name="application-name" content="&nbsp;" />
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="img-min/mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="img-min/mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="img-min/mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="img-min/mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="img-min/mstile-310x310.png" />
+
+    <script src="https://use.typekit.net/seu8svk.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav class="padding-xxs padding-y">
+                <div class="grid">
+                    <div class="grid__column--6">
+                        <a href="/">
+                            <img class="header--logo" src="img-min/red-flags-logo-no-flag.png" alt="Red Flags Logo" />
+                        </a>
+                    </div>
+                    <div class="grid__column--6 mobile--menu">
+                        <span>Menu</span>
+                    </div>
+                    <div class="grid__column--6 mobile--nav-list">
+                        <ul class="nav-list">
+                            <li class="nav-list--item">
+                                <a class="nav-list--link" href="#play">Play</a>
+                            </li>
+                            <li class="nav-list--item">
+                                <a class="nav-list--link" href="#create">Create</a>
+                            </li>
+                            <li class="nav-list--item">
+                                <a class="button button--filled button--light nav-list--button" href="#buy">Buy</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero__push">
+            <div class="container">
+                <h1 class="color-lightest hero--type__main type type-center">Create the perfect dates for your friends.</h1>
+                <h2 class="color-lightest hero--type__main-large type-center">THEN<span class="hero--type__main-largest"> RUIN</span> THEM.</h2>
+            </div>
+        </div>
+    </section>
+
+    <section class="play" id="play">
+        <img class="play-side" src="img-min/PLAY.svg" alt="">
+        <div class="container__push-left shadow">
+            <div class="container padding-md">
+                <div class="grid">
+                    <div class="grid__column--6--md">
+
+                        <div class="play--landing state-1 active">
+                            <h2>Hey you! Yeah, you. Let’s play a round of Red Flags.</h2>
+                            <div class="grid" id="shuffle-animation">
+                                <div class="grid__column">
+                                    <div class="play--card__animation white-card">
+                                        <img class="card card__zero card__shadow" src="img-min/white-card-front.png" alt="">
+                                        <img class="card card__one" src="img-min/white-card-front.png" alt="">
+                                        <img class="card card__two" src="img-min/white-card-front.png" alt="">
+                                        <img class="card card__three" src="img-min/white-card-front.png" alt="">
+                                        <img class="card card__four" src="img-min/white-card-front.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="grid__column">
+                                    <div class="play--card__animation red-card">
+                                        <img class="card card__zero card__shadow" src="img-min/red-card-front.png" alt="">
+                                        <img class="card card__one" src="img-min/red-card-front.png" alt="">
+                                        <img class="card card__two" src="img-min/red-card-front.png" alt="">
+                                        <img class="card card__three" src="img-min/red-card-front.png" alt="">
+                                        <img class="card card__four" src="img-min/red-card-front.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="button button--filled button--primary" id="js-cardShuffle">SHUFFLE THE DAMN CARDS</button>
+                        </div>
+
+                        <div class="play--landing state-2">
+                            <h2>Ooooooooo&hellip;let’s see who the potential lucky person is.</h2>
+                            <div class="" id="js-red-cardReveal">
+                                <div class="grid" id="js-cardFlip">
+                                    <div class="grid__column">
+                                        <div class="play--card__flip white-card">
+                                            <div class="flip-container" ontouchstart="this.classList.toggle('hover');" id="js-cardFlip__one">
+                                                <div class="flipper">
+                                                    <div class="front">
+                                                        <img class="card card__front card__shadow" src="img-min/white-card-front.png" alt="">
+                                                    </div>
+                                                    <div class="back">
+                                                        <img class="card card__back card__shadow" src="img-min/white-1-card-back.png" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="type-center js-text__clickToFlip"><small><em>CLICK TO FLIP</em></small></div>
+                                        </div>
+                                    </div>
+                                    <div class="grid__column">
+                                        <div class="play--card__flip white-card">
+                                            <div class="flip-container" ontouchstart="this.classList.toggle('hover');" id="js-cardFlip__two">
+                                                <div class="flipper">
+                                                    <div class="front">
+                                                        <img class="card card__front card__shadow" src="img-min/white-card-front.png" alt="">
+                                                    </div>
+                                                    <div class="back">
+                                                        <img class="card card__back card__shadow" src="img-min/white-2-card-back.png" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="type-center js-text__clickToFlip"><small><em>CLICK TO FLIP</em></small></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="play--card__static red-card" id="js-redCard">
+                                    <img class="card card__back card__shadow" src="img-min/red-card-back.png" alt="">
+                                </div>
+                            </div>
+                            <button class="button button--filled button--primary" id="js-redCardActivate">GIVE ME A RED CARD</button>
+                        </div>
+
+                        <div class="play--landing state-3">
+                            <h2>Well, your decision. Do you want this lovely date or not?</h2>
+                            <div class="grid" id="shuffle-animation">
+                                <div class="grid__column">
+                                    <div class="play--card__static">
+                                        <img class="card card__back card__shadow card__1" src="img-min/white-1-card-back.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="grid__column">
+                                    <div class="play--card__static">
+                                        <img class="card card__back card__shadow card__2" src="img-min/white-2-card-back.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="grid__column">
+                                    <div class="play--card__static">
+                                        <img class="card card__back card__shadow card__3" src="img-min/red-card-back.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="button button--filled button--primary" id="js-decisionYes">My baby!</button>
+                            <button class="button button--filled button--primary" id="js-decisionNo">Hell no!</button>
+                        </div>
+
+                        <div class="play--landing state-4">
+                            <h2>Thanks for playing! We think you should buy the starter kit for even more crazy ass cards.</h2>
+                            <div class="grid">
+                                <div class="grid__column--4--md">
+                                    <img src="img-min/RedFlags_1024x1024.png" alt="A picture of the packaging of the card game Red Flags: The Game of Terrible Dates" />
+                                </div>
+                                <div class="grid__column grid__column--8--md">
+                                    <h5>400 hilarious cards to have a wonderful evening of terrible dates without any of the actual dating.</h5>
+                                    <a class="button button--filled button--primary" href="#starter-pack">ORDER YOUR STARTER PACK NOW</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid__column--6--md">
+                        <div class="heart--animate beat">
+                            <svg class="heart" width="100px" height="100px" viewBox="955 799 339 318" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g id="heart" stroke="none" fill="none" transform="translate(955.000000, 799.000000)" fill-rule="evenodd">
+                                    <path d="M185.230326,21.2271913 C187.381939,18.7454087 188.952408,16.9341913 189.478204,16.3465826 C199.502918,5.20966957 218.466163,2.8938 232.482775,1.28306087 C240.577265,0.356713043 248.73402,0.00414782609 256.87002,0.00414782609 C318.505755,0.00414782609 336.901694,47.8009304 336.901694,108.462887 C336.901694,169.124843 189.720347,286.77793 192.487694,316.186017 C167.526224,275.744713 13.1151835,193.94267 2.07346919,130.522409 C-8.96132672,67.1021478 25.9902651,30.3316696 60.9487753,21.1442348 C84.8517345,14.8533652 111.515122,21.4691478 133.806102,30.7326261 C143.893081,34.9288435 152.693245,42.8028 161.514163,49.2250174 C168.94449,39.5052783 177.523265,30.711887 185.230326,21.2271913" fill="#ED0000"></path>
+                                </g>
+                            </svg>
+                        </div>
+
+                        <div class="content-slider-nav">
+                            <div>
+                                <p>Hiya! I’m Broken Hearty! I’m here to show you how fun red flags can be. Click this for instructions.</p>
+                            </div>
+                            <div>
+                                <p>Each person draws seven white cards at first. Two white cards are selected by each person each turn.</p>
+                            </div>
+                            <div>
+                                <p>Though one person is chosen as the judge or the person the dates are being made for. Each turn the judge rotates clockwise.</p>
+                            </div>
+                            <div>
+                                <p>Red cards are drawn and discarded each turn to keep everything random.</p>
+                            </div>
+                            <div>
+                                <p>We will select a match for you to judge whether or not you’d like to date them. Shuffle the cards to begin!</p>
+                            </div>
+                            <div>
+                                <p>Ready to see your lovely person? Click the cards to flip them over</p>
+                            </div>
+                            <div>
+                                <p>Who doesn't love hugs</p>
+                            </div>
+                            <div>
+                                <p>A good match. I think they will suit you well. At this point in the game, all of the potential matches have been presented to you and your playmates have made their initial cases to you.</p>
+                            </div>
+                            <div>
+                                <p>Now it is time to ruin the person’s next to you. Typically, you start by giving the person on your left the red card. The next round you can do the right and after that, across the table and repeat that process.</p>
+                            </div>
+                            <div>
+                                <p>Wow. Hope you like frogs! At this point, all of your friends will make cases why you should still date this person after getting their red flag, the judge of the round decides who get’s the point.</p>
+                            </div>
+                            <div>
+                                <p id="decisionText">You better make a decision!</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="break cta bg-lighter">
+        <div class="container padding-md padding-y">
+            <div class="grid">
+                <div class="grid__column--6--md">
+                    <img src="img-min/RedFlags_1024x1024.png" alt="A picture of the packaging of the card game Red Flags: The Game of Terrible Dates" />
+                </div>
+                <div class="grid__column--6--md">
+                    <h3>Pretty sick game, huh?</h3>
+                    <h5>You’ll get a  pack of 400 dope cards to play with your dope friends.</h5>
+                    <p>
+                        Scroll down to learn more or click the button below to add the 400 card starter pack to your hot date cart and start debating over the worst dates. Ever.
+                    </p>
+                    <a class="button button--filled button--light" href="#starter-pack">ORDER YOUR STARTER PACK NOW</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="break one"></section>
+
+    <section class="buy" id="buy">
+        <img class="buy-side" src="img-min/BUY.svg" alt="">
+        <div class="container">
+
+            <div class="grid">
+                <div class="grid__column--1--md"></div>
+                <div class="grid__column--5--md">
+                    <div class="product--card shadow" id="starter-pack">
+                        <div class="product--image">
+                            <img src="img-min/RedFlags_1024x1024.jpg" alt="">
+                            <div class="product--card-price">
+                                <div class="product--card-price__svg">
+                                    <svg width="49px" height="46px" viewBox="0 0 49 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <path d="M26.773705,3.0706 C27.084705,2.7116 27.311705,2.4496 27.387705,2.3646 C28.836705,0.7536 31.577705,0.4186 33.603705,0.1856 C34.773705,0.0516 35.952705,0.0006 37.128705,0.0006 C46.037705,0.0006 48.696705,6.9146 48.696705,15.6896 C48.696705,24.4646 27.422705,41.4836 27.822705,45.7376 C24.214705,39.8876 1.89570499,28.0546 0.299704987,18.8806 C-1.29529501,9.7066 3.75670499,4.3876 8.80970499,3.0586 C12.264705,2.1486 16.118705,3.1056 19.340705,4.4456 C20.798705,5.0526 22.070705,6.1916 23.345705,7.1206 C24.419705,5.7146 25.659705,4.4426 26.773705,3.0706" id="heart" stroke="none" fill="#ED0000" fill-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <div class="product--card-price__price">
+                                    <span>$12</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product--content">
+                            <h4 class="product--heading">Red Flags Starter Pack</h4>
+                            <p>
+                                You get 400 cards of delicious fun with your friends or whoever the hell you play with. This is a lovely game of terrible dates and convincing your friends of the dates  “good” qualities.
+                            </p>
+                            <button class="button button--filled button--primary">ADD TO MY HOT DATE CART</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid__column grid__column--1--md"></div>
+                <div class="grid__column--5--md">
+                    <div class="product--card shadow">
+                        <div class="product--image">
+                            <img src="img-min/DarkRedFlags-3Quarters_1024x1024.jpg" alt="">
+                            <div class="product--card-price">
+                                <div class="product--card-price__svg">
+                                    <svg width="49px" height="46px" viewBox="0 0 49 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <path d="M26.773705,3.0706 C27.084705,2.7116 27.311705,2.4496 27.387705,2.3646 C28.836705,0.7536 31.577705,0.4186 33.603705,0.1856 C34.773705,0.0516 35.952705,0.0006 37.128705,0.0006 C46.037705,0.0006 48.696705,6.9146 48.696705,15.6896 C48.696705,24.4646 27.422705,41.4836 27.822705,45.7376 C24.214705,39.8876 1.89570499,28.0546 0.299704987,18.8806 C-1.29529501,9.7066 3.75670499,4.3876 8.80970499,3.0586 C12.264705,2.1486 16.118705,3.1056 19.340705,4.4456 C20.798705,5.0526 22.070705,6.1916 23.345705,7.1206 C24.419705,5.7146 25.659705,4.4426 26.773705,3.0706" id="heart" stroke="none" fill="#ED0000" fill-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <div class="product--card-price__price">
+                                    <span>$12</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product--content">
+                            <h4 class="product--heading">Dark Red Flags: A Filthy Expansion</h4>
+                            <p>
+                                <small><em>This is an expansion for Red Flags, and requires the Red Flags Main Game to play.</em></small>
+                                Dark Red Flags adds 75 really, really nasty Red Flag cards to your game.
+                            </p>
+                            <button class="button button--filled button--primary">ADD TO MY HOT DATE CART</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid">
+                <div class="grid__column--1--md"></div>
+                <div class="grid__column--5--md">
+                    <div class="product--card shadow">
+                        <div class="product--image">
+                            <img src="img-min/NerdyRedFlags-3Quarters_1024x1024.jpg" alt="">
+                            <div class="product--card-price">
+                                <div class="product--card-price__svg">
+                                    <svg width="49px" height="46px" viewBox="0 0 49 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <path d="M26.773705,3.0706 C27.084705,2.7116 27.311705,2.4496 27.387705,2.3646 C28.836705,0.7536 31.577705,0.4186 33.603705,0.1856 C34.773705,0.0516 35.952705,0.0006 37.128705,0.0006 C46.037705,0.0006 48.696705,6.9146 48.696705,15.6896 C48.696705,24.4646 27.422705,41.4836 27.822705,45.7376 C24.214705,39.8876 1.89570499,28.0546 0.299704987,18.8806 C-1.29529501,9.7066 3.75670499,4.3876 8.80970499,3.0586 C12.264705,2.1486 16.118705,3.1056 19.340705,4.4456 C20.798705,5.0526 22.070705,6.1916 23.345705,7.1206 C24.419705,5.7146 25.659705,4.4426 26.773705,3.0706" id="heart" stroke="none" fill="#ED0000" fill-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <div class="product--card-price__price">
+                                    <span>$12</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product--content">
+                            <h4 class="product--heading">Nerdy Red Flags: A Geeky Expansion</h4>
+                            <p>
+                                <small><em>This is an expansion for Red Flags, and requires the Red Flags Main Game to play.</em></small>
+                                Nerdy Red Flags adds 75 nerdtastic Red Flag cards to your game.
+                            </p>
+                            <button class="button button--filled button--primary">ADD TO MY HOT DATE CART</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid__column grid__column--1--md"></div>
+                <div class="grid__column--5--md">
+                    <div class="product--card shadow">
+                        <div class="product--image">
+                            <img src="img-min/SexyRedFlags-3Quarters_1024x1024.jpg" alt="">
+                            <div class="product--card-price">
+                                <div class="product--card-price__svg">
+                                    <svg width="49px" height="46px" viewBox="0 0 49 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <path d="M26.773705,3.0706 C27.084705,2.7116 27.311705,2.4496 27.387705,2.3646 C28.836705,0.7536 31.577705,0.4186 33.603705,0.1856 C34.773705,0.0516 35.952705,0.0006 37.128705,0.0006 C46.037705,0.0006 48.696705,6.9146 48.696705,15.6896 C48.696705,24.4646 27.422705,41.4836 27.822705,45.7376 C24.214705,39.8876 1.89570499,28.0546 0.299704987,18.8806 C-1.29529501,9.7066 3.75670499,4.3876 8.80970499,3.0586 C12.264705,2.1486 16.118705,3.1056 19.340705,4.4456 C20.798705,5.0526 22.070705,6.1916 23.345705,7.1206 C24.419705,5.7146 25.659705,4.4426 26.773705,3.0706" id="heart" stroke="none" fill="#ED0000" fill-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <div class="product--card-price__price">
+                                    <span>$12</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product--content">
+                            <h4 class="product--heading">Sexy Red Flags: A Seductive Expansion</h4>
+                            <p>
+                                <small><em>This is an expansion for Red Flags, and requires the Red Flags Main Game to play.</em></small>
+                                Sexy Red Flags adds 75 sexually explicit and perks to your game.
+                            </p>
+                            <button class="button button--filled button--primary">ADD TO MY HOT DATE CART</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid">
+                <div class="grid__column--1--md"></div>
+                <div class="grid__column--11--md">
+                    <div class="product--card shadow">
+                        <div class="grid">
+                            <div class="grid__column--3--md">
+                                <div class="product--image">
+                                    <img src="img-min/BlankRedFlags-3Quarters_1024x1024.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="grid__column--9--md">
+                                <div class="product--content">
+                                    <div class="product--card-price custom">
+                                        <div class="product--card-price__svg">
+                                            <svg width="49px" height="46px" viewBox="0 0 49 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                <path d="M26.773705,3.0706 C27.084705,2.7116 27.311705,2.4496 27.387705,2.3646 C28.836705,0.7536 31.577705,0.4186 33.603705,0.1856 C34.773705,0.0516 35.952705,0.0006 37.128705,0.0006 C46.037705,0.0006 48.696705,6.9146 48.696705,15.6896 C48.696705,24.4646 27.422705,41.4836 27.822705,45.7376 C24.214705,39.8876 1.89570499,28.0546 0.299704987,18.8806 C-1.29529501,9.7066 3.75670499,4.3876 8.80970499,3.0586 C12.264705,2.1486 16.118705,3.1056 19.340705,4.4456 C20.798705,5.0526 22.070705,6.1916 23.345705,7.1206 C24.419705,5.7146 25.659705,4.4426 26.773705,3.0706" id="heart" stroke="none" fill="#ED0000" fill-rule="evenodd"></path>
+                                            </svg>
+                                        </div>
+                                        <div class="product--card-price__price">
+                                            <span>$12</span>
+                                        </div>
+                                    </div>
+                                    <h4 class="product--heading">Blank Red Flags</h4>
+                                    <p>
+                                        <small><em>This is an expansion for Red Flags, and requires the Red Flags Main Game to play.</em></small>
+                                        <br />
+                                        Have you ever wanted to date your best friend's dad? Now you can with this pack of 20 blank cards for Red Flags. Just grab a marker and get weird!
+                                    </p>
+                                    <button class="button button--filled button--primary">ADD TO MY HOT DATE CART</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid">
+                <div class="grid__column--1--md"></div>
+                <div class="grid__column--11--md">
+                    <div class="product--card shadow">
+                        <div class="grid">
+                            <div class="grid__column--8--md">
+                                <div class="product--image">
+                                    <img src="img-min/starter-pack.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="grid__column--4--md">
+                                <div class="product--content">
+                                    <div class="product--card-price custom">
+                                        <div class="product--card-price__svg">
+                                            <svg width="49px" height="46px" viewBox="0 0 49 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                <path d="M26.773705,3.0706 C27.084705,2.7116 27.311705,2.4496 27.387705,2.3646 C28.836705,0.7536 31.577705,0.4186 33.603705,0.1856 C34.773705,0.0516 35.952705,0.0006 37.128705,0.0006 C46.037705,0.0006 48.696705,6.9146 48.696705,15.6896 C48.696705,24.4646 27.422705,41.4836 27.822705,45.7376 C24.214705,39.8876 1.89570499,28.0546 0.299704987,18.8806 C-1.29529501,9.7066 3.75670499,4.3876 8.80970499,3.0586 C12.264705,2.1486 16.118705,3.1056 19.340705,4.4456 C20.798705,5.0526 22.070705,6.1916 23.345705,7.1206 C24.419705,5.7146 25.659705,4.4426 26.773705,3.0706" id="heart" stroke="none" fill="#ED0000" fill-rule="evenodd"></path>
+                                            </svg>
+                                        </div>
+                                        <div class="product--card-price__price">
+                                            <span>$12</span>
+                                        </div>
+                                    </div>
+                                    <h4 class="product--heading">The Get Your Freak On Game Night Pack</h4>
+                                    <p>
+                                        You get 400 cards of delicious fun with your friends or whoever the hell you play with. This is a lovely game of terrible dates and convincing your friends of the dates  “good” qualities.
+                                    </p>
+                                    <p>
+                                        <strong>You get:</strong>
+                                    </p>
+                                    <ul>
+                                        <li>The Red Flags starter pack</li>
+                                        <li>The Dark Red Flags Expansion</li>
+                                        <li>The Sexy Red Flags Expansion</li>
+                                        <li>The Nerdy red Flags Expansion</li>
+                                        <li>A free create your own pack of 30</li>
+                                        <li>A free Blank Red Flags Pack</li>
+                                    </ul>
+                                    <button class="button button--filled button--primary">ADD TO MY HOT DATE CART</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="break two">
+        <div class="testing">
+            <div class="testimonial">
+                <div class="container padding-md padding-y">
+                    <img src="img-min/quote-mark.svg" alt="">
+                    <blockquote>
+                        I love this game so much! <a href="https://twitter.com/hashtag/redflagsgame" target="_blank">#redflagsgame</a>
+                        <cite>&mdash;<a href="https://twitter.com/ChandlerPeters3/status/712746750398894081" target="_blank">@ChandlerPeters3</a></cite>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="create" id="create">
+        <img class="create-side" src="img-min/CREATE.svg" alt="">
+        <div class="container__push-right shadow">
+            <div class="container padding-md">
+                <div class="create--landing">
+                    <h2>Guess what?! You can create your own cards as a gift or add a personal touch to your collection. Make it nasty, cute, whatever&hellip;</h2>
+                    <form action="/create.html">
+                        <div class="grid">
+                            <div class="grid__column--4--md">
+                                <div class="create--card">
+                                    <div class="create--card-price">
+                                        <div class="create--card-price__svg">
+                                            <svg width="49px" height="46px" viewBox="0 0 49 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                <path d="M26.773705,3.0706 C27.084705,2.7116 27.311705,2.4496 27.387705,2.3646 C28.836705,0.7536 31.577705,0.4186 33.603705,0.1856 C34.773705,0.0516 35.952705,0.0006 37.128705,0.0006 C46.037705,0.0006 48.696705,6.9146 48.696705,15.6896 C48.696705,24.4646 27.422705,41.4836 27.822705,45.7376 C24.214705,39.8876 1.89570499,28.0546 0.299704987,18.8806 C-1.29529501,9.7066 3.75670499,4.3876 8.80970499,3.0586 C12.264705,2.1486 16.118705,3.1056 19.340705,4.4456 C20.798705,5.0526 22.070705,6.1916 23.345705,7.1206 C24.419705,5.7146 25.659705,4.4426 26.773705,3.0706" id="heart" stroke="none" fill="#ED0000" fill-rule="evenodd"></path>
+                                            </svg>
+                                        </div>
+                                        <div class="create--card-price__price">
+                                            <span>$5</span>
+                                        </div>
+                                    </div>
+                                    <div class="create--content">
+                                        <h4 class="create--heading">10 Custom Cards</h4>
+                                        <p>
+                                            Fancy some custom cards of whatever you want? Get this pack of 10 cards for $5. We can help you with sample custom cards.
+                                        </p>
+                                    </div>
+                                    <button class="button button--filled button--primary">SELECT THIS PACKAGE</button>
+                                </div>
+                            </div>
+                            <div class="grid__column--4--md">
+                                <div class="create--card">
+                                    <div class="create--card-price">
+                                        <div class="create--card-price__svg">
+                                            <svg width="49px" height="46px" viewBox="0 0 49 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                <path d="M26.773705,3.0706 C27.084705,2.7116 27.311705,2.4496 27.387705,2.3646 C28.836705,0.7536 31.577705,0.4186 33.603705,0.1856 C34.773705,0.0516 35.952705,0.0006 37.128705,0.0006 C46.037705,0.0006 48.696705,6.9146 48.696705,15.6896 C48.696705,24.4646 27.422705,41.4836 27.822705,45.7376 C24.214705,39.8876 1.89570499,28.0546 0.299704987,18.8806 C-1.29529501,9.7066 3.75670499,4.3876 8.80970499,3.0586 C12.264705,2.1486 16.118705,3.1056 19.340705,4.4456 C20.798705,5.0526 22.070705,6.1916 23.345705,7.1206 C24.419705,5.7146 25.659705,4.4426 26.773705,3.0706" id="heart" stroke="none" fill="#ED0000" fill-rule="evenodd"></path>
+                                            </svg>
+                                        </div>
+                                        <div class="create--card-price__price">
+                                            <span>$10</span>
+                                        </div>
+                                    </div>
+                                    <div class="create--content">
+                                        <h4 class="create--heading">20 Custom Cards</h4>
+                                        <p>
+                                            Fancy some custom cards of whatever you want? Get this pack of 20 cards for $10. We can help you with sample custom cards.
+                                        </p>
+                                    </div>
+                                    <button class="button button--filled button--primary">SELECT THIS PACKAGE</button>
+                                </div>
+                            </div>
+                            <div class="grid__column--4--md">
+                                <div class="create--card">
+                                    <div class="create--card-price">
+                                        <div class="create--card-price__svg">
+                                            <svg width="49px" height="46px" viewBox="0 0 49 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                <path d="M26.773705,3.0706 C27.084705,2.7116 27.311705,2.4496 27.387705,2.3646 C28.836705,0.7536 31.577705,0.4186 33.603705,0.1856 C34.773705,0.0516 35.952705,0.0006 37.128705,0.0006 C46.037705,0.0006 48.696705,6.9146 48.696705,15.6896 C48.696705,24.4646 27.422705,41.4836 27.822705,45.7376 C24.214705,39.8876 1.89570499,28.0546 0.299704987,18.8806 C-1.29529501,9.7066 3.75670499,4.3876 8.80970499,3.0586 C12.264705,2.1486 16.118705,3.1056 19.340705,4.4456 C20.798705,5.0526 22.070705,6.1916 23.345705,7.1206 C24.419705,5.7146 25.659705,4.4426 26.773705,3.0706" id="heart" stroke="none" fill="#ED0000" fill-rule="evenodd"></path>
+                                            </svg>
+                                        </div>
+                                        <div class="create--card-price__price">
+                                            <span>$15</span>
+                                        </div>
+                                    </div>
+                                    <div class="create--content">
+                                        <h4 class="create--heading">30 Custom Cards</h4>
+                                        <p>
+                                            Fancy some custom cards of whatever you want? Get this pack of 30 cards for $15. We can help you with sample custom cards.
+                                        </p>
+                                    </div>
+                                    <button class="button button--filled button--primary">SELECT THIS PACKAGE</button>
+                                </div>
+                            </div>
+                            <div class="grid__column--4--md">
+                                <div class="create--card">
+                                    <div class="create--card-price">
+                                        <div class="create--card-price__svg">
+                                            <svg width="49px" height="46px" viewBox="0 0 49 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                <path d="M26.773705,3.0706 C27.084705,2.7116 27.311705,2.4496 27.387705,2.3646 C28.836705,0.7536 31.577705,0.4186 33.603705,0.1856 C34.773705,0.0516 35.952705,0.0006 37.128705,0.0006 C46.037705,0.0006 48.696705,6.9146 48.696705,15.6896 C48.696705,24.4646 27.422705,41.4836 27.822705,45.7376 C24.214705,39.8876 1.89570499,28.0546 0.299704987,18.8806 C-1.29529501,9.7066 3.75670499,4.3876 8.80970499,3.0586 C12.264705,2.1486 16.118705,3.1056 19.340705,4.4456 C20.798705,5.0526 22.070705,6.1916 23.345705,7.1206 C24.419705,5.7146 25.659705,4.4426 26.773705,3.0706" id="heart" stroke="none" fill="#ED0000" fill-rule="evenodd"></path>
+                                            </svg>
+                                        </div>
+                                        <div class="create--card-price__price">
+                                            <span>$20</span>
+                                        </div>
+                                    </div>
+                                    <div class="create--content">
+                                        <h4 class="create--heading">40 Custom Cards</h4>
+                                        <p>
+                                            Fancy some custom cards of whatever you want? Get this pack of 40 cards for $20. We can help you with sample custom cards.
+                                        </p>
+                                    </div>
+                                    <button class="button button--filled button--primary">SELECT THIS PACKAGE</button>
+                                </div>
+                            </div>
+                            <div class="grid__column--4--md">
+                                <div class="create--card">
+                                    <div class="create--card-price">
+                                        <div class="create--card-price__svg">
+                                            <svg width="49px" height="46px" viewBox="0 0 49 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                <path d="M26.773705,3.0706 C27.084705,2.7116 27.311705,2.4496 27.387705,2.3646 C28.836705,0.7536 31.577705,0.4186 33.603705,0.1856 C34.773705,0.0516 35.952705,0.0006 37.128705,0.0006 C46.037705,0.0006 48.696705,6.9146 48.696705,15.6896 C48.696705,24.4646 27.422705,41.4836 27.822705,45.7376 C24.214705,39.8876 1.89570499,28.0546 0.299704987,18.8806 C-1.29529501,9.7066 3.75670499,4.3876 8.80970499,3.0586 C12.264705,2.1486 16.118705,3.1056 19.340705,4.4456 C20.798705,5.0526 22.070705,6.1916 23.345705,7.1206 C24.419705,5.7146 25.659705,4.4426 26.773705,3.0706" id="heart" stroke="none" fill="#ED0000" fill-rule="evenodd"></path>
+                                            </svg>
+                                        </div>
+                                        <div class="create--card-price__price">
+                                            <span>$25</span>
+                                        </div>
+                                    </div>
+                                    <div class="create--content">
+                                        <h4 class="create--heading">50 Custom Cards</h4>
+                                        <p>
+                                            Fancy some custom cards of whatever you want? Get this pack of 50 cards for $25. We can help you with sample custom cards.
+                                        </p>
+                                    </div>
+                                    <button class="button button--filled button--primary">SELECT THIS PACKAGE</button>
+                                </div>
+                            </div>
+                            <div class="grid__column--4--md">
+                                <div class="create--card">
+                                    <div class="create--card-price">
+                                        <div class="create--card-price__svg">
+                                            <svg width="49px" height="46px" viewBox="0 0 49 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                <path d="M26.773705,3.0706 C27.084705,2.7116 27.311705,2.4496 27.387705,2.3646 C28.836705,0.7536 31.577705,0.4186 33.603705,0.1856 C34.773705,0.0516 35.952705,0.0006 37.128705,0.0006 C46.037705,0.0006 48.696705,6.9146 48.696705,15.6896 C48.696705,24.4646 27.422705,41.4836 27.822705,45.7376 C24.214705,39.8876 1.89570499,28.0546 0.299704987,18.8806 C-1.29529501,9.7066 3.75670499,4.3876 8.80970499,3.0586 C12.264705,2.1486 16.118705,3.1056 19.340705,4.4456 C20.798705,5.0526 22.070705,6.1916 23.345705,7.1206 C24.419705,5.7146 25.659705,4.4426 26.773705,3.0706" id="heart" stroke="none" fill="#ED0000" fill-rule="evenodd"></path>
+                                            </svg>
+                                        </div>
+                                        <div class="create--card-price__price">
+                                            <span>$5+</span>
+                                        </div>
+                                    </div>
+                                    <div class="create--content">
+                                        <h4 class="create--heading">Custom Amount</h4>
+                                        <p>
+                                            Enter the amount of cards you'd like, must be a multiple of 10.
+                                        </p>
+                                        <div class="cart--container">
+                                            <span class="cart--heading">Quantity:</span>
+                                            <span>
+                                                <span class="cart--item__subtract" id="cart--item__subtract">-</span>
+                                                <span class="cart--item__total" id="cart--item__total">22</span>
+                                                <span class="cart--item__add" id="cart--item__add">+</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <button class="button button--filled button--primary">SELECT THIS PACKAGE</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="buy--footer">
+    <div class="container padding-xs padding-y">
+        <div class="grid">
+            <div class="grid__column--1--md"></div>
+            <div class="grid__column--5--md">
+                <h4>HEY YOU! Buy now and get a free gift!</h4>
+            </div>
+            <div class="grid__column--6--md">
+                <div class="cart--container">
+                    <span class="cart--heading">Cart:</span>
+                    <span>
+                        <span class="cart--item__total" id="cart--item__total">22</span>
+                    </span>
+                </div>
+                <a href="/checkout.html"><button class="button button--filled button--primary button--sm">Checkout</button></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="break three"></section>
+
+<footer>
+    <nav class="padding-md padding-y">
+        <div class="container">
+            <div class="grid">
+                <div class="grid__column--2--md">
+                    <h4 class="footer-nav--heading">Navigation</h4>
+                    <ul class="footer-nav">
+                        <li class="footer-nav--list-item">
+                            <a class="footer-nav--link" href="#play">Play</a>
+                        </li>
+                        <li class="footer-nav--list-item">
+                            <a class="footer-nav--link" href="#create">Create</a>
+                        </li>
+                        <li class="footer-nav--list-item">
+                            <a class="button button--filled button--primary" href="#buy">Buy</a>
+                        </li>
+                    </ul>
+                    <span class="footer--copyright__desktop">&copy; Skybound, LLC 2017</span>
+                </div>
+                <div class="grid__column--2--md">
+                    <h4 class="footer-nav--heading">Follow Us</h4>
+                    <ul class="social-list">
+                        <li class="social-list--item">
+                            <a class="social-list--icon" href="https://www.facebook.com/RedFlagsGame/" target="_blank">
+                                <img src="img-min/facebook.svg" alt="Facebook icon." />
+                            </a>
+                        </li>
+                        <li class="social-list--item">
+                            <a class="social-list--icon" href="https://twitter.com/redflagsgame" target="_blank">
+                                <img src="img-min/twitter.svg" alt="Twitter icon." />
+                            </a>
+                        </li>
+                        <li class="social-list--item">
+                            <a class="social-list--icon" href="https://www.instagram.com/redflagsgame/" target="_blank">
+                                <img src="img-min/instagram.svg" alt="Instagram icon." />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="grid__column--4--md">
+                    <a href="/">
+                        <div class="footer--logo">
+                            <svg width="120px" height="203px" viewBox="0 -1 120 203" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <path d="M63.691,66.3506 C60.3,60.8506 39.316,49.7256 37.816,41.1006 C36.316,32.4756 41.066,27.4756 45.816,26.2256 C50.566,24.9756 56.441,27.8506 56.441,27.8506 L56.441,37.4756 L60.566,37.4756 L61.691,48.2256 L66.566,34.2256 L62.691,34.2256 L62.691,26.2256 C62.691,26.2256 64.066,23.3506 72.441,23.3506 C80.816,23.3506 83.316,29.8506 83.316,38.1006 C83.316,46.3506 63.316,62.3506 63.691,66.3506 L63.691,66.3506 Z M109.988,8.1046 C109.988,8.1046 91.849,14.5966 77.147,15.5516 C62.445,16.5056 46.789,1.6136 31.705,1.6136 C16.621,1.6136 8.22,8.1046 8.22,8.1046 L7.305,2.2516 C7.102,0.9556 5.985,-0.0004 4.673,-0.0004 L2.756,-0.0004 C1.099,-0.0004 -0.184,1.4526 0.022,3.0976 L24.861,201.8316 L33.045,201.8316 L16.43,73.7866 C16.43,73.7866 28.459,66.3506 40.297,66.3506 C52.135,66.3506 61.108,81.0406 82.302,81.0406 C103.496,81.0406 119.152,73.5956 119.152,73.5956 L109.988,8.1046 Z" id="broken-flag" stroke="none" fill="#ED0000" fill-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+                <div class="grid__column--4--md">
+                    <h4 class="footer-nav--heading">Contact Us</h4>
+                    <form>
+                        <div class="footer--form__box">
+                            <div class="control control--inline">
+                                <label for="yourName" class="control__label grid__column--2--md">Name</label>
+                                <input class="control__input grid__column--10--md" type="text" id="yourName" />
+                            </div>
+                        </div>
+                        <div class="footer--form__box">
+                            <div class="control control--inline">
+                                <label for="yourEmail" class="control__label grid__column--2--md">Email</label>
+                                <input class="control__input grid__column--10--md" type="email" id="yourEmail"/>
+                            </div>
+                        </div>
+                        <div class="footer--form__box">
+                            <div class="control control--inline">
+                                <label for="yourMessage" class="control__label grid__column--2--md">Message</label>
+                                <textarea class="control__textarea control__textarea--xs grid__column--10--md" id="yourMessage"></textarea>
+                            </div>
+                        </div>
+                        <div class="control">
+                            <input class="button button--filled button--light" type="button" value="Send Message"/>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <span class="footer--copyright__mobile">&copy; Skybound, LLC 2017</span>
+        </div>
+    </nav>
+</footer>
+
+<!-- Scripts at bottom to load faster -->
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<!-- build:js --><script src="js-min/scripts.min.js"></script><!-- endbuild -->
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</body>
+</html>
