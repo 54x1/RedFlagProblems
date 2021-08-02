@@ -32,27 +32,14 @@ socket.on('gameOver', handleGameOver);
 socket.on('gameCode', handleGameCode);
 socket.on('unknownCode', handleUnknownCode);
 socket.on('tooManyPlayers', handleTooManyPlayers);
-// socket.on('perksstuff', perk);
+socket.on('perksstuff', perk);
 
 
 function joinPerks(){
-
-  $.getJSON("perks.json",function(data){
-      var randIn = Math.floor(Math.random() * (data.perks.length));
-      var randIn2 = Math.floor(Math.random() * (data.perks.length));
-      var perkData1 = (data.perks[randIn].card);
-      var perkData2 = (data.perks[randIn2].card);
-      var perks = [perkData1, perkData2];
-      // socket.emit('keydown', perks);
-perk(perks);
-  });
+  socket.emit('getPerks');
 
 }
-function perk(data){
-    console.log(data);
-$('.perk1').append(data);
 
-}
 
 const gameScreen = document.getElementById('gameScreen');
 const initialScreen = document.getElementById('initialScreen');
@@ -70,10 +57,14 @@ joinGameBtn.addEventListener('click', joinPerks);
 function newGame() {
   socket.emit('newGame');
 
-perk();
+// perk();
   init();
 }
+function perk(data){
+    console.log(data);
+$('.perk1').append(data);
 
+}
 
 
 
