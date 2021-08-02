@@ -61,11 +61,12 @@ io.on('connection', client => {
         var randIn2 = Math.floor(Math.random() * (data.perks.length));
         var perkData1 = (data.perks[randIn].card);
         var perkData2 = (data.perks[randIn2].card);
-        var perks = [perkData1, perkData2];
-          client.emit('perksstuff', perks);
-  // perk(perks);
+        const perks = [perkData1, perkData2];
+        perk(perks);
     });
-
+function perk(perks){
+  client.emit('perksstuff', perks);
+}
 
 
     // const roomName = clientRooms[client.id];
