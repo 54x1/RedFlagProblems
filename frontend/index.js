@@ -33,11 +33,7 @@ socket.on('gameCode', handleGameCode);
 socket.on('unknownCode', handleUnknownCode);
 socket.on('tooManyPlayers', handleTooManyPlayers);
 // socket.on('gameCode1', handleGameCode1);
-function perk(perks){
-    alert(perks);
-  return perks;
 
-}
 
 function joinPerks(){
 
@@ -49,6 +45,11 @@ function joinPerks(){
       var perks = [perkData1, perkData2];
 perk(perks);
   });
+
+}
+function perk(data){
+    console.log(data);
+  // return data;
 
 }
 
