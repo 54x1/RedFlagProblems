@@ -58,22 +58,20 @@ joinGameBtn.addEventListener('click', joinGame);
 
 function newGame() {
   socket.emit('newGame');
-  perk();
+  $.getJSON("perks.json",function(data){
+      var randIn = Math.floor(Math.random() * (data.perks.length));
+      var randIn2 = Math.floor(Math.random() * (data.perks.length));
+      var perkData1 = (data.perks[randIn].card);
+      var perkData2 = (data.perks[randIn2].card);
+      var perks = [perkData1, perkData2];
+$('.perk1').append(perks);
+
+  });
   init();
 }
 function joinPerks(perkData1, perkData2){
   // alert('here');
-    $.getJSON("perks.json",function(data){
-        var randIn = Math.floor(Math.random() * (data.perks.length));
-        var randIn2 = Math.floor(Math.random() * (data.perks.length));
-        var perkData1 = (data.perks[randIn].card);
-        var perkData2 = (data.perks[randIn2].card);
-        var perks = [perkData1, perkData2];
-        function perk(perks) {
-        return perks;
-        }
 
-    });
 
 
 }
@@ -83,8 +81,16 @@ function joinPerks(perkData1, perkData2){
 
 $(joinGameBtn).on('click', function(){
   $(gameCodeDisplay).html($(gameCodeInput).val());
-  var perk1 = perk(perks);
-  $('.perk1').append(perk1);
+  $.getJSON("perks.json",function(data){
+      var randIn = Math.floor(Math.random() * (data.perks.length));
+      var randIn2 = Math.floor(Math.random() * (data.perks.length));
+      var perkData1 = (data.perks[randIn].card);
+      var perkData2 = (data.perks[randIn2].card);
+      var perks = [perkData1, perkData2];
+$('.perk1').append(perks);
+
+  });
+
 
 });
 
