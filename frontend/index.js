@@ -46,6 +46,7 @@ perk(perks);
 }
 function perk(perks){
   return perks;
+  console.log(perks);
 }
 
 const gameScreen = document.getElementById('gameScreen');
@@ -54,11 +55,11 @@ const newGameBtn = document.getElementById('newGameButton');
 const joinGameBtn = document.getElementById('joinGameButton');
 const gameCodeInput = document.getElementById('gameCodeInput');
 const gameCodeDisplay = document.getElementById('gameCodeDisplay');
-  const perksData = perk();
+
 newGameBtn.addEventListener('click', newGame);
 newGameBtn.addEventListener('click', joinPerks);
 joinGameBtn.addEventListener('click', joinGame);
-
+  const perksData = perk();
 
 
 function newGame(perksData) {
