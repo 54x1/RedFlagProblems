@@ -56,7 +56,7 @@ joinGameBtn.addEventListener('click', joinGame);
 
 
 
-function newGame() {
+function newGame(perks) {
   socket.emit('newGame');
   alert(perk(perks));
   init();
