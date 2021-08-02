@@ -8,7 +8,7 @@ const clientRooms = {};
 
 io.on('connection', client => {
 
-  client.on('joinPerks', handlePerks);
+  client.on('keydown', handleKeydown);
   client.on('newGame', handleNewGame);
   client.on('joinGame', handleJoinGame);
 
@@ -55,17 +55,7 @@ io.on('connection', client => {
     client.emit('init', 1);
   }
 
-  function handlePerks(perks, room) {
-    $.getJSON("perks.json",function(data){
-        var randIn = Math.floor(Math.random() * (data.perks.length));
-        var randIn2 = Math.floor(Math.random() * (data.perks.length));
-        var perkData1 = (data.perks[randIn].card);
-        var perkData2 = (data.perks[randIn2].card);
-        var perks = [perkData1, perkData2];
-        // io.sockets.in(room).emit('getPerks', perks);
-    });
-
-  }
+  function handleKeydown(keyCode) {
     // const roomName = clientRooms[client.id];
     // if (!roomName) {
     //   return;
@@ -82,7 +72,7 @@ io.on('connection', client => {
     // if (vel) {
     //   state[roomName].players[client.number - 1].vel = vel;
     // }
-  
+  }
 });
 
 function startGameInterval(roomName) {
