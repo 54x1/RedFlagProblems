@@ -66,9 +66,9 @@ joinGameBtn.addEventListener('click', joinGame);
 
 
 console.log(perksData);
-function newGame(perk(data)) {
+function newGame() {
   socket.emit('newGame');
-  const perksData = perk(data);
+  const perksData = perk();
 $('.perk1').append(perksData);
   init();
 }
