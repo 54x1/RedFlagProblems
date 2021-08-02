@@ -49,9 +49,9 @@ function joinPerks(){
       var perkData1 = (data.perks[randIn].card);
       var perkData2 = (data.perks[randIn2].card);
       var perks = [perkData1, perkData2];
-return perks;
-  });
 
+  });
+return perks;
 }
 
 const gameScreen = document.getElementById('gameScreen');
