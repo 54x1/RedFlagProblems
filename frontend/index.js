@@ -54,15 +54,7 @@ const gameCodeDisplay = document.getElementById('gameCodeDisplay');
 newGameBtn.addEventListener('click', newGame);
 joinGameBtn.addEventListener('click', joinGame);
 
-$(joinGameBtn).on('click', function(){
-  $(gameCodeDisplay).html($(gameCodeInput).val());
-    joinPerks();
-  const varPerks = perk(perks);
-  console.log(varPerks)
 
-$('.perk1').append(varPerks);
-
-});
 
 function newGame() {
   joinPerks();
@@ -87,6 +79,15 @@ function perk(perks) {
   console.log(perks);
 return perks;
 }
+$(joinGameBtn).on('click', function(){
+  $(gameCodeDisplay).html($(gameCodeInput).val());
+    joinPerks();
+  const varPerks = perk(perks);
+  console.log(varPerks)
+
+$('.perk1').append(varPerks);
+
+});
 
 function joinGame() {
   const code = gameCodeInput.value;
