@@ -64,6 +64,7 @@ io.on('connection', client => {
         const perks = [perkData1, perkData2];
         perk(perks);
     });
+  }
 function perk(perks){
   client.emit('perksstuff', perks);
 }
