@@ -56,9 +56,9 @@ joinGameBtn.addEventListener('click', joinGame);
 
 $(joinGameBtn).on('click', function(){
   // alert($(gameCodeInput).val());
-  // const varPerks = perk();
+  const varPerks = perk();
 $(gameCodeDisplay).html($(gameCodeInput).val())
-// $('.perk1').append(varPerks[0]);
+$('.perk1').append(varPerks[0]);
 
 });
 
