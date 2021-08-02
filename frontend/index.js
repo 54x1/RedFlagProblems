@@ -58,21 +58,19 @@ joinGameBtn.addEventListener('click', joinGame);
 
 function newGame() {
   socket.emit('newGame');
+  const perksData = joinPerks();
+$('.perk1').append(perksData);
+  init();
+}
+function joinPerks(){
   $.getJSON("perks.json",function(data){
       var randIn = Math.floor(Math.random() * (data.perks.length));
       var randIn2 = Math.floor(Math.random() * (data.perks.length));
       var perkData1 = (data.perks[randIn].card);
       var perkData2 = (data.perks[randIn2].card);
       var perks = [perkData1, perkData2];
-$('.perk1').append(perks);
-
+return perks;
   });
-  init();
-}
-function joinPerks(perkData1, perkData2){
-  // alert('here');
-
-
 
 }
 
