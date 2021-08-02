@@ -64,28 +64,27 @@ $(gameCodeDisplay).html($(gameCodeInput).val())
 });
 
 function newGame() {
-  // const varPerks = perk();
+  console.log(perks());
   socket.emit('newGame');
   // alert('ng');
   init();
 }
-// function perks() {
-//
-//
-// }
+function perks() {
+$.getJSON("perks.json",function(data){
+    var randIn = Math.floor(Math.random() * (data.perks.length));
+    var randIn2 = Math.floor(Math.random() * (data.perks.length));
+    var perkData1 = (data.perks[randIn].card);
+    var perkData2 = (data.perks[randIn2].card);
+    var perks = [perkData1, perkData2];
+    return perks;
+    console.log(perks);
+});
+}
 
 function joinGame() {
   const code = gameCodeInput.value;
   socket.emit('joinGame', code);
-  $.getJSON("perks.json",function(data){
-      var randIn = Math.floor(Math.random() * (data.perks.length));
-      var randIn2 = Math.floor(Math.random() * (data.perks.length));
-      var perkData1 = (data.perks[randIn].card);
-      var perkData2 = (data.perks[randIn2].card);
-      var perks = [perkData1, perkData2];
-      return perks;
-      console.log(perks);
-  });
+console.log(perks());
   init();
 }
 
