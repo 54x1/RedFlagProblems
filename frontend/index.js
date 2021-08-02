@@ -69,23 +69,23 @@ function newGame() {
   // alert('ng');
   init();
 }
-
-    $.getJSON("perks.json",function(data){
-        var randIn = Math.floor(Math.random() * (data.perks.length));
-        var randIn2 = Math.floor(Math.random() * (data.perks.length));
-        var perkData1 = (data.perks[randIn].card);
-        var perkData2 = (data.perks[randIn2].card);
-        var perks = [perkData1, perkData2];
-perks(perks);
-    });
-function perks(perks) {
-  console.log(perks);
-return perks;
-}
+// function perks() {
+//
+//
+// }
 
 function joinGame() {
   const code = gameCodeInput.value;
   socket.emit('joinGame', code);
+  $.getJSON("perks.json",function(data){
+      var randIn = Math.floor(Math.random() * (data.perks.length));
+      var randIn2 = Math.floor(Math.random() * (data.perks.length));
+      var perkData1 = (data.perks[randIn].card);
+      var perkData2 = (data.perks[randIn2].card);
+      var perks = [perkData1, perkData2];
+      return perks;
+      console.log(perks);
+  });
   init();
 }
 
