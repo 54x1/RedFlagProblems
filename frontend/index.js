@@ -89,7 +89,6 @@ return perks;
 function joinGame() {
   const code = gameCodeInput.value;
   socket.emit('joinGame', code);
-console.log(perks());
   init();
 }
 
