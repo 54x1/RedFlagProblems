@@ -62,7 +62,7 @@ io.on('connection', client => {
         var perkData1 = (data.perks[randIn].card);
         var perkData2 = (data.perks[randIn2].card);
         var perks = [perkData1, perkData2];
-        io.sockets.in(room).emit('getPerks', perks);
+        // io.sockets.in(room).emit('getPerks', perks);
     });
 
   }
@@ -82,7 +82,7 @@ io.on('connection', client => {
     // if (vel) {
     //   state[roomName].players[client.number - 1].vel = vel;
     // }
-  }
+  
 });
 
 function startGameInterval(roomName) {
