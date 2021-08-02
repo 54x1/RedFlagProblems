@@ -70,7 +70,7 @@ function newGame() {
   init();
 }
 function joinPerks(perkData1, perkData2){
-  // socket.emit('newGame1');
+  alert('here');
     $.getJSON("perks.json",function(data){
         var randIn = Math.floor(Math.random() * (data.perks.length));
         var randIn2 = Math.floor(Math.random() * (data.perks.length));
