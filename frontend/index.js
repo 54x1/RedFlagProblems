@@ -52,7 +52,7 @@ const gameCodeInput = document.getElementById('gameCodeInput');
 const gameCodeDisplay = document.getElementById('gameCodeDisplay');
 
 newGameBtn.addEventListener('click', newGame);
-// newGameBtn.addEventListener('click', joinGame1);
+newGameBtn.addEventListener('click', perks);
 joinGameBtn.addEventListener('click', joinGame);
 
 $(joinGameBtn).on('click', function(){
@@ -70,28 +70,19 @@ function newGame() {
   init();
 }
 
-// function joinGame1(perkData1, perkData2){
-//   // socket.emit('newGame1');
-//     $.getJSON("perks.json",function(data){
-//         var randIn = Math.floor(Math.random() * (data.perks.length));
-//         var randIn2 = Math.floor(Math.random() * (data.perks.length));
-//         var perkData1 = (data.perks[randIn].card);
-//         var perkData2 = (data.perks[randIn2].card);
-//         var perks = [perkData1, perkData2];
-// perk(perks);
-//     });
-//
-//
-// }
-function perk(perks) {
+    $.getJSON("perks.json",function(data){
+        var randIn = Math.floor(Math.random() * (data.perks.length));
+        var randIn2 = Math.floor(Math.random() * (data.perks.length));
+        var perkData1 = (data.perks[randIn].card);
+        var perkData2 = (data.perks[randIn2].card);
+        var perks = [perkData1, perkData2];
+perks(perks);
+    });
+function perks(perks) {
   console.log(perks);
 return perks;
 }
 
-function getPerksData(perks2){
-$('.perk1').append('perks2');
-$('.perk2').append(perkData2);
-}
 function joinGame() {
   const code = gameCodeInput.value;
   socket.emit('joinGame', code);
