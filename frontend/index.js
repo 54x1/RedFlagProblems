@@ -76,9 +76,10 @@ $.getJSON("perks.json",function(data){
     var perkData1 = (data.perks[randIn].card);
     var perkData2 = (data.perks[randIn2].card);
     var perks = [perkData1, perkData2];
-    return perks;
-    console.log(perks);
+
 });
+return perks;
+console.log(perks);
 }
 
 function joinGame() {
