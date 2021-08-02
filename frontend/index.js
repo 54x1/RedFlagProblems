@@ -2,7 +2,7 @@ const BG_COLOUR = '#231f20';
 const SNAKE_COLOUR = '#c2c2c2';
 const FOOD_COLOUR = '#e66916';
 
-const socket = io('https://sleepy-island-33889.herokuapp.com/');
+const socket = io('https://flags-54x1.herokuapp.com/');
 
 socket.on('init', handleInit);
 socket.on('gameState', handleGameState);
@@ -21,7 +21,10 @@ const gameCodeDisplay = document.getElementById('gameCodeDisplay');
 newGameBtn.addEventListener('click', newGame);
 joinGameBtn.addEventListener('click', joinGame);
 
-
+$(joinGameBtn).on('click', function(){
+  // alert($(gameCodeInput).val());
+$(gameCodeDisplay).html($(gameCodeInput).val())
+});
 function newGame() {
   socket.emit('newGame');
   init();
