@@ -63,12 +63,12 @@ const gameCodeDisplay = document.getElementById('gameCodeDisplay');
 newGameBtn.addEventListener('click', newGame);
 newGameBtn.addEventListener('click', joinPerks);
 joinGameBtn.addEventListener('click', joinGame);
-  const perksData = perk();
+
 
 console.log(perksData);
-function newGame(perksData) {
+function newGame(perk(data)) {
   socket.emit('newGame');
-
+  const perksData = perk(data);
 $('.perk1').append(perksData);
   init();
 }
