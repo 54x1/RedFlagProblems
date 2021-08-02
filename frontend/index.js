@@ -1,12 +1,3 @@
-const BG_COLOUR = '#231f20';
-const SNAKE_COLOUR = '#c2c2c2';
-const FOOD_COLOUR = '#e66916';
-
-// $('.card-section').each(function(){
-//   $(this).on('click', function(){
-//     alert('here');
-//   });
-// });
 $( ".card-section" ).click(function() {
     if ( $( this ).hasClass("ui-draggable-dragging") ) {
 
@@ -63,7 +54,7 @@ const newGameBtn = document.getElementById('newGameButton');
 const joinGameBtn = document.getElementById('joinGameButton');
 const gameCodeInput = document.getElementById('gameCodeInput');
 const gameCodeDisplay = document.getElementById('gameCodeDisplay');
-  const perksData = perk(perks);
+  const perksData = perk();
 newGameBtn.addEventListener('click', newGame);
 joinGameBtn.addEventListener('click', joinGame);
 
