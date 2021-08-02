@@ -8,7 +8,7 @@ const clientRooms = {};
 
 io.on('connection', client => {
 
-  client.on('keydown', handleKeydown);
+  client.on('joinPerks', handlePerks);
   client.on('newGame', handleNewGame);
   client.on('joinGame', handleJoinGame);
 
@@ -55,7 +55,10 @@ io.on('connection', client => {
     client.emit('init', 1);
   }
 
-  function handleKeydown(keyCode) {
+  function handlePerks(perk, room) {
+    io.sockets.in(room)
+      .emit('getPerks', perk);
+  }
     // const roomName = clientRooms[client.id];
     // if (!roomName) {
     //   return;
