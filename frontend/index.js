@@ -81,6 +81,7 @@ return perks;
 }
 $(joinGameBtn).on('click', function(){
   $(gameCodeDisplay).html($(gameCodeInput).val());
+  joinPerks();
   const varPerks = perk();
   console.log(varPerks)
 $('.perk1').append(varPerks);
