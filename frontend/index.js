@@ -49,9 +49,12 @@ function joinPerks(){
       var perkData1 = (data.perks[randIn].card);
       var perkData2 = (data.perks[randIn2].card);
       var perks = [perkData1, perkData2];
-
+perk(perks);
   });
-return perks;
+
+}
+function perk(){
+  return perks;
 }
 
 const gameScreen = document.getElementById('gameScreen');
@@ -60,7 +63,7 @@ const newGameBtn = document.getElementById('newGameButton');
 const joinGameBtn = document.getElementById('joinGameButton');
 const gameCodeInput = document.getElementById('gameCodeInput');
 const gameCodeDisplay = document.getElementById('gameCodeDisplay');
-  const perksData = joinPerks();
+  const perksData = perk();
 newGameBtn.addEventListener('click', newGame);
 joinGameBtn.addEventListener('click', joinGame);
 
