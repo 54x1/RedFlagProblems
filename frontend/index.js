@@ -42,27 +42,6 @@ socket.on('gameCode', handleGameCode);
 socket.on('unknownCode', handleUnknownCode);
 socket.on('tooManyPlayers', handleTooManyPlayers);
 // socket.on('gameCode1', handleGameCode1);
-
-
-const gameScreen = document.getElementById('gameScreen');
-const initialScreen = document.getElementById('initialScreen');
-const newGameBtn = document.getElementById('newGameButton');
-const joinGameBtn = document.getElementById('joinGameButton');
-const gameCodeInput = document.getElementById('gameCodeInput');
-const gameCodeDisplay = document.getElementById('gameCodeDisplay');
-  const perksData = joinPerks();
-  console.log(perksData);
-newGameBtn.addEventListener('click', newGame);
-joinGameBtn.addEventListener('click', joinGame);
-
-
-
-function newGame(perksData) {
-  socket.emit('newGame');
-
-$('.perk1').append(perksData);
-  init();
-}
 function joinPerks(){
   $.getJSON("perks.json",function(data){
       var randIn = Math.floor(Math.random() * (data.perks.length));
@@ -74,6 +53,26 @@ return perks;
   });
 
 }
+
+const gameScreen = document.getElementById('gameScreen');
+const initialScreen = document.getElementById('initialScreen');
+const newGameBtn = document.getElementById('newGameButton');
+const joinGameBtn = document.getElementById('joinGameButton');
+const gameCodeInput = document.getElementById('gameCodeInput');
+const gameCodeDisplay = document.getElementById('gameCodeDisplay');
+  const perksData = joinPerks();
+newGameBtn.addEventListener('click', newGame);
+joinGameBtn.addEventListener('click', joinGame);
+
+
+
+function newGame(perksData) {
+  socket.emit('newGame');
+
+$('.perk1').append(perksData);
+  init();
+}
+
 
 
 
