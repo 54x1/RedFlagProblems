@@ -55,10 +55,12 @@ newGameBtn.addEventListener('click', newGame);
 joinGameBtn.addEventListener('click', joinGame);
 
 $(joinGameBtn).on('click', function(){
-  // alert($(gameCodeInput).val());
-  const varPerks = perk();
-$(gameCodeDisplay).html($(gameCodeInput).val())
-$('.perk1').append(varPerks[0]);
+  $(gameCodeDisplay).html($(gameCodeInput).val());
+    joinPerks();
+  const varPerks = perk(perks);
+  console.log(varPerks)
+
+$('.perk1').append(varPerks);
 
 });
 
@@ -69,7 +71,7 @@ function newGame() {
   init();
 }
 function joinPerks(perkData1, perkData2){
-  alert('here');
+  // alert('here');
     $.getJSON("perks.json",function(data){
         var randIn = Math.floor(Math.random() * (data.perks.length));
         var randIn2 = Math.floor(Math.random() * (data.perks.length));
