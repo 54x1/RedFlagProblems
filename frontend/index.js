@@ -50,15 +50,15 @@ const newGameBtn = document.getElementById('newGameButton');
 const joinGameBtn = document.getElementById('joinGameButton');
 const gameCodeInput = document.getElementById('gameCodeInput');
 const gameCodeDisplay = document.getElementById('gameCodeDisplay');
-
+  const perksData = joinPerks();
 newGameBtn.addEventListener('click', newGame);
 joinGameBtn.addEventListener('click', joinGame);
 
 
 
-function newGame() {
+function newGame(perksData) {
   socket.emit('newGame');
-  const perksData = joinPerks();
+
 $('.perk1').append(perksData);
   init();
 }
@@ -77,17 +77,10 @@ return perks;
 
 
 
-$(joinGameBtn).on('click', function(){
+$(joinGameBtn).on('click', function(perksData){
   $(gameCodeDisplay).html($(gameCodeInput).val());
-  $.getJSON("perks.json",function(data){
-      var randIn = Math.floor(Math.random() * (data.perks.length));
-      var randIn2 = Math.floor(Math.random() * (data.perks.length));
-      var perkData1 = (data.perks[randIn].card);
-      var perkData2 = (data.perks[randIn2].card);
-      var perks = [perkData1, perkData2];
-$('.perk1').append(perks);
 
-  });
+  $('.perk1').append(perksData);
 
 
 });
