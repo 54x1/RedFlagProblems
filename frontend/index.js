@@ -32,7 +32,7 @@ socket.on('gameOver', handleGameOver);
 socket.on('gameCode', handleGameCode);
 socket.on('unknownCode', handleUnknownCode);
 socket.on('tooManyPlayers', handleTooManyPlayers);
-// socket.on('gameCode1', handleGameCode1);
+// socket.on('perksstuff', perk);
 
 
 function joinPerks(){
@@ -43,6 +43,7 @@ function joinPerks(){
       var perkData1 = (data.perks[randIn].card);
       var perkData2 = (data.perks[randIn2].card);
       var perks = [perkData1, perkData2];
+      // socket.emit('keydown', perks);
 perk(perks);
   });
 
@@ -63,7 +64,7 @@ const gameCodeDisplay = document.getElementById('gameCodeDisplay');
 newGameBtn.addEventListener('click', newGame);
 newGameBtn.addEventListener('click', joinPerks);
 joinGameBtn.addEventListener('click', joinGame);
-
+joinGameBtn.addEventListener('click', joinPerks);
 
 // console.log();
 function newGame() {
