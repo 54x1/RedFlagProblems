@@ -52,7 +52,6 @@ const gameCodeInput = document.getElementById('gameCodeInput');
 const gameCodeDisplay = document.getElementById('gameCodeDisplay');
 
 newGameBtn.addEventListener('click', newGame);
-newGameBtn.addEventListener('click', joinPerks);
 joinGameBtn.addEventListener('click', joinGame);
 
 $(joinGameBtn).on('click', function(){
