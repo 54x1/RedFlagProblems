@@ -32,14 +32,26 @@ socket.on('gameOver', handleGameOver);
 socket.on('gameCode', handleGameCode);
 socket.on('unknownCode', handleUnknownCode);
 socket.on('tooManyPlayers', handleTooManyPlayers);
-socket.on('perksstuff', perk);
+// socket.on('gameCode1', handleGameCode1);
 
 
 function joinPerks(){
-  socket.emit('getPerks');
+
+  $.getJSON("perks.json",function(data){
+      var randIn = Math.floor(Math.random() * (data.perks.length));
+      var randIn2 = Math.floor(Math.random() * (data.perks.length));
+      var perkData1 = (data.perks[randIn].card);
+      var perkData2 = (data.perks[randIn2].card);
+      var perks = [perkData1, perkData2];
+perk(perks);
+  });
 
 }
+function perk(data){
+    console.log(data);
+$('.perk1').append(data);
 
+}
 
 const gameScreen = document.getElementById('gameScreen');
 const initialScreen = document.getElementById('initialScreen');
@@ -51,20 +63,16 @@ const gameCodeDisplay = document.getElementById('gameCodeDisplay');
 newGameBtn.addEventListener('click', newGame);
 newGameBtn.addEventListener('click', joinPerks);
 joinGameBtn.addEventListener('click', joinGame);
-joinGameBtn.addEventListener('click', joinPerks);
+
 
 // console.log();
 function newGame() {
   socket.emit('newGame');
 
-// perk();
+perk();
   init();
 }
-function perk(data){
-    console.log(data);
-$('.perk1').append(data);
 
-}
 
 
 
