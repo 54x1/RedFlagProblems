@@ -34,6 +34,7 @@ socket.on('unknownCode', handleUnknownCode);
 socket.on('tooManyPlayers', handleTooManyPlayers);
 // socket.on('gameCode1', handleGameCode1);
 function joinPerks(){
+  alert('hrtr');
   $.getJSON("perks.json",function(data){
       var randIn = Math.floor(Math.random() * (data.perks.length));
       var randIn2 = Math.floor(Math.random() * (data.perks.length));
