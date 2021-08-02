@@ -27,7 +27,7 @@ $('.flags').sortable();
 $('.card-section').on('touchmove', function(){
 // $(this).css({"left"}) =
 });
-const socket = io('https://degrassi-mountie-63053.herokuapp.com/');
+const socket = io('https://degrassi-mountie-54x1.herokuapp.com/');
 // var perk1val = document.getElementsByClassName('perk3');
 // var perk2val = document.getElementsByClassName('perk4');
 // // console.log(perk2val.value);
