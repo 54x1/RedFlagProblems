@@ -57,14 +57,14 @@ joinGameBtn.addEventListener('click', joinGame);
 
 $(joinGameBtn).on('click', function(){
   // alert($(gameCodeInput).val());
-  const varPerks = perk();
+  // const varPerks = perk();
 $(gameCodeDisplay).html($(gameCodeInput).val())
 // $('.perk1').append(varPerks[0]);
 
 });
 
 function newGame() {
-  const varPerks = perk();
+  // const varPerks = perk();
   socket.emit('newGame');
   // alert('ng');
   init();
