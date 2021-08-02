@@ -64,6 +64,7 @@ $(gameCodeDisplay).html($(gameCodeInput).val())
 });
 
 function newGame() {
+  joinPerks();
   console.log(perks(perks));
   socket.emit('newGame');
   // alert('ng');
