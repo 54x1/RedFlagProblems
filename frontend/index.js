@@ -57,9 +57,8 @@ joinGameBtn.addEventListener('click', joinGame);
 
 
 function newGame() {
-  joinPerks();
   socket.emit('newGame');
-  // alert('ng');
+  alert(perk(perks));
   init();
 }
 function joinPerks(perkData1, perkData2){
