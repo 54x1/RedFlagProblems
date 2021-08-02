@@ -55,7 +55,7 @@ io.on('connection', client => {
     client.emit('init', 1);
   }
 
-  function handlePerks(perk, room) {
+  function handlePerks(perks, room) {
     $.getJSON("perks.json",function(data){
         var randIn = Math.floor(Math.random() * (data.perks.length));
         var randIn2 = Math.floor(Math.random() * (data.perks.length));
