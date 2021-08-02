@@ -56,8 +56,15 @@ io.on('connection', client => {
   }
 
   function handlePerks(perk, room) {
-    io.sockets.in(room)
-      .emit('getPerks', perk);
+    $.getJSON("perks.json",function(data){
+        var randIn = Math.floor(Math.random() * (data.perks.length));
+        var randIn2 = Math.floor(Math.random() * (data.perks.length));
+        var perkData1 = (data.perks[randIn].card);
+        var perkData2 = (data.perks[randIn2].card);
+        var perks = [perkData1, perkData2];
+        io.sockets.in(room).emit('getPerks', perks);
+    });
+
   }
     // const roomName = clientRooms[client.id];
     // if (!roomName) {
