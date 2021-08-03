@@ -55,7 +55,8 @@ handleHi(roomName);
   }
 
   function handleHi(roomName) {
-    client.to(roomName).emit('hello');
+    var perks = 'hi';
+    client.to(roomName).emit('hello', perks);
 
   }
     // const roomName = clientRooms[client.id];
