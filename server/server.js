@@ -38,8 +38,7 @@ io.on('connection', client => {
     client.join(roomName);
     client.number = 2;
     client.emit('init', 2);
-
-    startGameInterval(roomName);
+    client()
   }
 
   function handleNewGame() {
@@ -53,6 +52,14 @@ io.on('connection', client => {
     client.join(roomName);
     client.number = 1;
     client.emit('init', 1);
+    $.getJSON("perks.json",function(data){
+        var randIn = Math.floor(Math.random() * (data.perks.length));
+        var randIn2 = Math.floor(Math.random() * (data.perks.length));
+        var perkData1 = (data.perks[randIn].card);
+        var perkData2 = (data.perks[randIn2].card);
+        var perks = [perkData1, perkData2];
+    client.emit('perks', perks);
+    });
   }
 
   function handleKeydown(keyCode) {
