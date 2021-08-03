@@ -49,7 +49,7 @@ perk(perks);
 }
 function perk(data){
     console.log(data);
-$('.perk1').append(data);
+$('.perk1').append(data[0]);
 
 }
 
