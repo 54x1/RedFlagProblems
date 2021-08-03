@@ -32,7 +32,7 @@ socket.on('gameOver', handleGameOver);
 socket.on('gameCode', handleGameCode);
 socket.on('unknownCode', handleUnknownCode);
 socket.on('tooManyPlayers', handleTooManyPlayers);
-socket.on('hello', joinPerks);
+// socket.on('gameCode1', handleGameCode1);
 
 
 function joinPerks(){
