@@ -55,7 +55,7 @@ handleHi(roomName);
   }
 
   function handleHi(roomName) {
-    client.emit.emit('hello', 'hi');
+    client.emit('hello', 'hi');
   }
     // const roomName = clientRooms[client.id];
     // if (!roomName) {
