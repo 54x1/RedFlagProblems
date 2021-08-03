@@ -29,7 +29,7 @@ const socket = io('https://flags-54x1.herokuapp.com/');
 socket.on('init', handleInit);
 socket.on('gameState', handleGameState);
 socket.on('gameOver', handleGameOver);
-socket.on('gameCode', perk);
+// socket.on('gameCode', perk);
 socket.on('perks', handleGameCode);
 socket.on('unknownCode', handleUnknownCode);
 socket.on('tooManyPlayers', handleTooManyPlayers);
