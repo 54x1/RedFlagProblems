@@ -50,7 +50,7 @@ perk(perks);
 function perk(data){
     console.log(data);
 $('.perk1').append(data);
-
+return data;
 }
 
 const gameScreen = document.getElementById('gameScreen');
@@ -88,7 +88,9 @@ $(joinGameBtn).on('click', function(perksData){
 
 function joinGame() {
   const code = gameCodeInput.value;
+  const perks = perk();
   socket.emit('joinGame', code);
+  socket.emit('keydown', perks);
   init();
 }
 
