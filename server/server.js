@@ -8,7 +8,7 @@ const clientRooms = {};
 
 io.on('connection', client => {
 
-  // client.on('keydown', handleKeydown);
+  client.on('joinPerks', handleKeydown);
   client.on('newGame', handleNewGame);
   client.on('joinGame', handleJoinGame);
 
@@ -61,7 +61,7 @@ io.on('connection', client => {
         var perks = [perkData1, perkData2];
         client.emit('getPerks', perks)
     });
-    
+
   }
 
   function handleKeydown(keyCode) {
