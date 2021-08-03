@@ -55,7 +55,7 @@ handleHi(roomName);
   }
 
   function handleHi(roomName) {
-    io.sockets.in(roomName).emit('gameState', JSON.stringify(gameState));
+    io.sockets.in(roomName).emit('hello', roomName);
   }
     // const roomName = clientRooms[client.id];
     // if (!roomName) {
