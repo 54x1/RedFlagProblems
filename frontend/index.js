@@ -48,7 +48,7 @@ function joinPerks(){
   });
 
 }
-function perk(data){
+function perks(data){
     console.log(data);
 $('.perk1').append(data);
 
