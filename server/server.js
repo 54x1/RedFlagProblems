@@ -55,7 +55,7 @@ handleHi(roomName);
   }
 
   function handleHi(roomName) {
-    socket.to(roomName).emit('hello');
+    client.to(roomName).emit('hello');
 
   }
     // const roomName = clientRooms[client.id];
