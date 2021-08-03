@@ -8,7 +8,7 @@ const clientRooms = {};
 
 io.on('connection', client => {
 
-  client.on('joinPerks', handlePerks);
+  client.on('keydown', handleKeydown);
   client.on('newGame', handleNewGame);
   client.on('joinGame', handleJoinGame);
 
@@ -53,26 +53,9 @@ io.on('connection', client => {
     client.join(roomName);
     client.number = 1;
     client.emit('init', 1);
-    $.getJSON("perks.json",function(data){
-        var randIn = Math.floor(Math.random() * (data.perks.length));
-        var randIn2 = Math.floor(Math.random() * (data.perks.length));
-        var perkData1 = (data.perks[randIn].card);
-        var perkData2 = (data.perks[randIn2].card);
-        var perks = [perkData1, perkData2];
-        client.emit('getPerks', perks)
-    });
-
   }
 
-  function handlePerks() {
-    $.getJSON("perks.json",function(data){
-        var randIn = Math.floor(Math.random() * (data.perks.length));
-        var randIn2 = Math.floor(Math.random() * (data.perks.length));
-        var perkData1 = (data.perks[randIn].card);
-        var perkData2 = (data.perks[randIn2].card);
-        var perks = [perkData1, perkData2];
-        client.emit('getPerks', perks)
-    });
+  function handleKeydown(keyCode) {
     // const roomName = clientRooms[client.id];
     // if (!roomName) {
     //   return;
