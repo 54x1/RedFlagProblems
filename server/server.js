@@ -8,7 +8,7 @@ const clientRooms = {};
 
 io.on('connection', client => {
 
-  client.on('joinPerks', handleKeydown);
+  client.on('joinPerks', handlePerks);
   client.on('newGame', handleNewGame);
   client.on('joinGame', handleJoinGame);
 
@@ -64,7 +64,15 @@ io.on('connection', client => {
 
   }
 
-  function handleKeydown(keyCode) {
+  function handlePerks() {
+    $.getJSON("perks.json",function(data){
+        var randIn = Math.floor(Math.random() * (data.perks.length));
+        var randIn2 = Math.floor(Math.random() * (data.perks.length));
+        var perkData1 = (data.perks[randIn].card);
+        var perkData2 = (data.perks[randIn2].card);
+        var perks = [perkData1, perkData2];
+        client.emit('getPerks', perks)
+    });
     // const roomName = clientRooms[client.id];
     // if (!roomName) {
     //   return;
