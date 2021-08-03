@@ -61,7 +61,7 @@ io.on('connection', client => {
         var perks = [perkData1, perkData2];
         client.emit('getPerks', perks)
     });
-    ;
+    
   }
 
   function handleKeydown(keyCode) {

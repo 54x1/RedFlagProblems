@@ -79,7 +79,7 @@ function newGame() {
 
 $(joinGameBtn).on('click', function(perksData){
   $(gameCodeDisplay).html($(gameCodeInput).val());
-  $('.perk1').append($(perk1).val());
+  // $('.perk1').append($(perk1).val());
 
 
 });
