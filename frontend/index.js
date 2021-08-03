@@ -33,7 +33,9 @@ socket.on('gameCode', perk);
 socket.on('perks', handleGameCode);
 socket.on('unknownCode', handleUnknownCode);
 socket.on('tooManyPlayers', handleTooManyPlayers);
-// socket.on('gameCode1', handleGameCode1);
+socket.on("hello", (data) => {
+  console.log(data); // world
+});
 
 
 function joinPerks(){
