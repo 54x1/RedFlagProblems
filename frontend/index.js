@@ -49,6 +49,7 @@ perk(perks);
 }
 function perk(data){
     console.log(data);
+    $('.perk1').empty();
 $('.perk1').append(data);
 
 }
@@ -96,6 +97,10 @@ let playerNumber;
 let gameActive = false;
 
 function init() {
+  $('.flags >.card-section:first-child').empty();
+  $('.flags >.card-section:nth-child(2)').empty();
+  $('.flags >.card-section:nth-child(3)').empty();
+  $('.flags >.card-section:last-child').empty();
   initialScreen.style.display = "none";
   gameScreen.style.display = "block";
   //
