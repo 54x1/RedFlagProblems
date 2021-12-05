@@ -49,7 +49,6 @@ perk(perks);
 }
 function perk(data){
     console.log(data);
-    $('.perk1').empty();
 $('.perk1').append(data);
 
 }
